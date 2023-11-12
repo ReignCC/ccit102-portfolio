@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* { 
+    margin : 0;
+    padding: 0;
+    box-sizing : border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    display : flex;
+    align-items : center;
+    justify-content : center;  
+    background-color: #023a15;
+    min-height : 600px;
+  }
+/* nav bar pindot */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}
+
+.navbar a {
+  margin-left: 10px;
+  position:relative;
+  border: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500px;
+  padding: 5px 8px;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.navbar a:hover {
+  transition: 0.8s;
+  background-color: #fff;
+  color: black;
+}
+
+.navbar a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: .5s;
+}
+
+.navbar a:hover::before{
+  cursor: pointer;
+  width: 100%;
+}
+ 
+  /* sa about me */
+  .new-content {
+    height: 100px;
+    color: ivory;
+    align-items: center;
+    padding-right: 40px;
+  }
+  .big-about {
+    font-size: 56px;
+
+  }
+  .under-about {
+    font-size: 32px;
+    color: yellowgreen;
+
+  }
+  .about-me {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+/* sa imge */
+.ig {
+  display: flex;
+}
+.github-img, .fb-img, .gmail-img {
+  width: 250px;
+  margin: 50px;
+}
+.gmail-img{
+  margin-top: 100px;
+}
+/* galaw updown */
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  from { transform: translate(0,0px);}
+  65% { transform: translate(0,40px);}
+
+  to {transform: translate(0,-0px);}
